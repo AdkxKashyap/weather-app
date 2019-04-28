@@ -6,7 +6,7 @@ const geoCode=require("./utils/geocoding")//Address->Lat/long
 const forecast=require("./utils/forecast")//Lat/long->forecast
 //These were used to create static web pages,to create dynamic web apps we are using handlebars.js.Hbs is a express plugin for handlebars.js
 const publicDirectoryPath = path.join(__dirname, "../public"); //path module is used to manage directory paths
-
+const port=process.env.PORT || 3000
 const viewDir = path.join(__dirname, "../templates/views"); //by default the location of the hbs views are set to view folder.
 const partialPath = path.join(__dirname, "../templates/partials");
 app.use(express.static(publicDirectoryPath)); //since index.html is a special name.The is serving the public directory.Consists of css and js files
@@ -81,6 +81,6 @@ app.get("*",(req,res)=>{
     errorMessage:"Not Found"
   })
 })
-app.listen(3000, () => {
-  console.log("server is up on port 3000");
+app.listen(port, () => {
+  console.log("server is up on port"+port);
 });

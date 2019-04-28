@@ -12,7 +12,7 @@ searchForm.addEventListener('submit',(e)=>{
     para2.textContent=""
     para1.textContent="Fetching Data..."
     const location=searchValue.value
-    var url="http://localhost:3000/weather?address="+location
+    var url="/weather?address="+location
     fetch(url).then((res)=>{
         res.json().then((data)=>{
             if(data.errorMessage){
