@@ -12,7 +12,7 @@ const forecast=(latitude,longitude,callback)=>{
         callback(body.error,undefined)
     }else{
              callback(undefined,body.currently.summary+"."+"It is currently "+body.currently.temperature+" degrees out.There is "
-                +body.currently.precipProbability+"% chance of rain")
+             +body.currently.precipProbability+"% chance of rain. Currently The wind speed is:"+body.currently.windSpeed+"m/sec.")
     }
     
    
