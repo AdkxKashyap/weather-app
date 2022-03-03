@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 const hbs = require("hbs");
 const app = express();
-const geoCode=require("./utils/geocoding")//Address->Lat/long
+const geoCode=require("./utils/geocoding")//Address->Latitude/longitude
 const forecast=require("./utils/forecast")//Lat/long->forecast
 //These were used to create static web pages,to create dynamic web apps we are using handlebars.js.Hbs is a express plugin for handlebars.js
 const publicDirectoryPath = path.join(__dirname, "../public"); //path module is used to manage directory paths

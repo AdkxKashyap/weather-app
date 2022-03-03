@@ -1,5 +1,6 @@
 const request=require('request')
 
+
 const forecast=(latitude,longitude,callback)=>{
     url="https://api.darksky.net/forecast/6a7acbcbc73d39a81091c39250342a50/"+latitude+","+longitude+"?units=si"
 

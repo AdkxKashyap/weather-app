@@ -1,6 +1,5 @@
 const request=require('request')
 
-
 const geoCode=(address,callback)=>{
     const geoCodeURL="https://api.mapbox.com/geocoding/v5/mapbox.places/"+encodeURIComponent(address)+".json?access_token=pk.eyJ1IjoiYWRreCIsImEiOiJjanV0bGYweXEwNnE0M3lxdHhuNzJ0aXo2In0.7cAUqvAbEd94rJFUfYgM2Q"
     request({url:geoCodeURL,json:true},(error,{body})=>{//Using destructuring
